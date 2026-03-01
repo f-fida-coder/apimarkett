@@ -82,13 +82,13 @@ export default function DocsPage() {
             </p>
             <div className="mt-5 flex flex-col gap-3 text-sm">
               <a
-                href="https://wa.me/923464901531"
+                href="https://wa.me/447402440753"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 text-foreground hover:text-primary transition-colors"
               >
                 <MessageCircle className="h-4 w-4" />
-                WhatsApp: +92 346 4901531
+                WhatsApp: +44 7402 440753
               </a>
               <a
                 href="https://wa.me/qr/CWSD3YRP4STCO1"

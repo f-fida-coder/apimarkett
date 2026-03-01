@@ -14,6 +14,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { popularApis } from "@/lib/data"
+import { WhatsAppLeadButton } from "@/components/whatsapp-lead-button"
 
 const endpoints = [
   { method: "POST", path: "/v1/chat/completions", description: "Create a chat completion" },
@@ -140,9 +141,13 @@ export default function ApiDetailPage({ params }: { params: Promise<{ id: string
                 <BookOpen className="h-4 w-4 mr-2" />
                 View Docs
               </Button>
-              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-xl">
-                Subscribe - Free
-              </Button>
+              <WhatsAppLeadButton
+                label="Subscribe - Free"
+                intent="Subscribe to API"
+                context={api.name}
+                size="lg"
+                className="rounded-xl bg-primary text-primary-foreground hover:bg-primary/90"
+              />
             </div>
           </div>
 
@@ -274,9 +279,12 @@ export default function ApiDetailPage({ params }: { params: Promise<{ id: string
                       </div>
                     </div>
 
-                    <Button className="w-full mt-6 bg-primary text-primary-foreground hover:bg-primary/90 rounded-xl">
-                      Get API Key
-                    </Button>
+                    <WhatsAppLeadButton
+                      label="Get API Key"
+                      intent="Get API key"
+                      context={api.name}
+                      className="w-full mt-6 bg-primary text-primary-foreground hover:bg-primary/90 rounded-xl"
+                    />
                   </div>
                 </div>
               </div>
@@ -391,16 +399,17 @@ export default function ApiDetailPage({ params }: { params: Promise<{ id: string
                         </li>
                       ))}
                     </ul>
-                    <Button
+                    <WhatsAppLeadButton
+                      label={plan.tier === "Enterprise" ? "Contact Sales" : "Get Started"}
+                      intent={plan.tier === "Enterprise" ? "Contact sales" : "Buy API plan"}
+                      context={`${api.name} - ${plan.tier} plan`}
                       className={`w-full mt-8 rounded-xl ${
                         plan.popular
                           ? "bg-primary text-primary-foreground hover:bg-primary/90"
                           : ""
                       }`}
                       variant={plan.popular ? "default" : "outline"}
-                    >
-                      {plan.tier === "Enterprise" ? "Contact Sales" : "Get Started"}
-                    </Button>
+                    />
                   </div>
                 ))}
               </div>

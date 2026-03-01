@@ -8,6 +8,7 @@ import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { pricingTiers } from "@/lib/data"
 import { cn } from "@/lib/utils"
+import { WhatsAppLeadButton } from "@/components/whatsapp-lead-button"
 
 const comparisonFeatures = [
   { category: "Usage", features: [
@@ -156,7 +157,10 @@ export default function PricingPage() {
                   ))}
                 </ul>
 
-                <Button
+                <WhatsAppLeadButton
+                  label={tier.cta}
+                  intent={tier.name === "Enterprise" ? "Contact sales" : "Buy API plan"}
+                  context={`${tier.name} plan`}
                   className={cn(
                     "mt-8 rounded-xl w-full",
                     tier.popular
@@ -165,9 +169,7 @@ export default function PricingPage() {
                   )}
                   variant={tier.popular ? "default" : "outline"}
                   size="lg"
-                >
-                  {tier.cta}
-                </Button>
+                />
               </div>
             ))}
           </div>
@@ -248,10 +250,13 @@ export default function PricingPage() {
             <p className="mt-3 text-muted-foreground max-w-xl mx-auto">
               Enterprise plans include dedicated support, custom contracts, SLAs, and on-premise deployment options.
             </p>
-            <Button size="lg" className="mt-6 bg-primary text-primary-foreground hover:bg-primary/90 rounded-xl gap-2">
-              Talk to Sales
-              <ArrowRight className="h-4 w-4" />
-            </Button>
+            <WhatsAppLeadButton
+              label="Talk to Sales"
+              intent="Talk to sales"
+              context="Enterprise custom plan"
+              size="lg"
+              className="mt-6 bg-primary text-primary-foreground hover:bg-primary/90 rounded-xl gap-2"
+            />
           </div>
         </div>
       </div>

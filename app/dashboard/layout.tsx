@@ -82,7 +82,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
           {!collapsed && (
             <div className="mb-3 rounded-lg border border-border bg-muted/30 p-3 text-xs text-muted-foreground">
               <p className="text-foreground font-medium mb-2">Support</p>
-              <a href="https://wa.me/923464901531" target="_blank" rel="noreferrer" className="flex items-center gap-1.5 hover:text-foreground transition-colors mb-1">
+              <a href="https://wa.me/447402440753" target="_blank" rel="noreferrer" className="flex items-center gap-1.5 hover:text-foreground transition-colors mb-1">
                 <MessageCircle className="h-3.5 w-3.5" />
                 WhatsApp
               </a>

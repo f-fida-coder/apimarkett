@@ -14,27 +14,27 @@ const footerLinks = {
     { label: "API Marketplace", href: "/marketplace" },
     { label: "Pricing", href: "/pricing" },
     { label: "Documentation", href: "/docs" },
-    { label: "API Status", href: "#" },
-    { label: "Changelog", href: "#" },
+    { label: "API Status", href: "/api-status" },
+    { label: "Changelog", href: "/changelog" },
   ],
   Resources: [
-    { label: "Getting Started", href: "/docs" },
-    { label: "Tutorials", href: "#" },
-    { label: "Blog", href: "#" },
-    { label: "Community", href: "#" },
-    { label: "SDKs", href: "#" },
+    { label: "Getting Started", href: "/getting-started" },
+    { label: "Tutorials", href: "/tutorials" },
+    { label: "Blog", href: "/blog" },
+    { label: "Community", href: "/community" },
+    { label: "SDKs", href: "/sdks" },
   ],
   Company: [
-    { label: "About", href: "#" },
-    { label: "Careers", href: "#" },
-    { label: "Contact", href: "#" },
-    { label: "Partners", href: "#" },
+    { label: "About", href: "/about" },
+    { label: "Careers", href: "/careers" },
+    { label: "Contact", href: "/contact" },
+    { label: "Partners", href: "/partners" },
   ],
   Legal: [
-    { label: "Privacy Policy", href: "#" },
-    { label: "Terms of Service", href: "#" },
-    { label: "Cookie Policy", href: "#" },
-    { label: "SLA", href: "#" },
+    { label: "Privacy Policy", href: "/privacy-policy" },
+    { label: "Terms of Service", href: "/terms-of-service" },
+    { label: "Cookie Policy", href: "/cookie-policy" },
+    { label: "SLA", href: "/sla" },
   ],
 }
 
@@ -56,11 +56,11 @@ export function SiteFooter() {
             </p>
             <div className="mt-5 space-y-2 text-xs text-muted-foreground">
               <a
-                href="tel:+923464901531"
+                href="tel:+447402440753"
                 className="flex items-center gap-2 hover:text-foreground transition-colors"
               >
                 <WhatsAppIcon className="h-3.5 w-3.5" />
-                WhatsApp: +92 346 4901531
+                WhatsApp: +44 7402 440753
               </a>
               <a
                 href="mailto:apiflowagency@gmail.com"
@@ -115,7 +115,7 @@ export function SiteFooter() {
           </p>
           <div className="flex items-center gap-4">
             <a
-              href="https://wa.me/923464901531"
+              href="https://wa.me/447402440753"
               target="_blank"
               rel="noreferrer"
               className="text-xs text-muted-foreground hover:text-foreground transition-colors"
