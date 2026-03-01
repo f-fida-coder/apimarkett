@@ -5,7 +5,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import {
   LayoutDashboard, Key, BarChart3, CreditCard, Settings,
-  Zap, ChevronLeft, ChevronRight, HelpCircle, LogOut, Menu, X, Package
+  Zap, ChevronLeft, ChevronRight, Menu, X, Package, MessageCircle, Send, Mail
 } from "lucide-react"
 import { cn } from "@/lib/utils"
 
@@ -79,6 +79,23 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
 
         {/* Bottom */}
         <div className="px-3 py-4 border-t border-border">
+          {!collapsed && (
+            <div className="mb-3 rounded-lg border border-border bg-muted/30 p-3 text-xs text-muted-foreground">
+              <p className="text-foreground font-medium mb-2">Support</p>
+              <a href="https://wa.me/923464901531" target="_blank" rel="noreferrer" className="flex items-center gap-1.5 hover:text-foreground transition-colors mb-1">
+                <MessageCircle className="h-3.5 w-3.5" />
+                WhatsApp
+              </a>
+              <a href="https://t.me/Apiflowagency" target="_blank" rel="noreferrer" className="flex items-center gap-1.5 hover:text-foreground transition-colors mb-1">
+                <Send className="h-3.5 w-3.5" />
+                Telegram
+              </a>
+              <a href="mailto:apiflowagency@gmail.com" className="flex items-center gap-1.5 hover:text-foreground transition-colors">
+                <Mail className="h-3.5 w-3.5" />
+                Gmail
+              </a>
+            </div>
+          )}
           <button
             onClick={() => setCollapsed(!collapsed)}
             className="flex items-center gap-3 w-full rounded-lg px-3 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"

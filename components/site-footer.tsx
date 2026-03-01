@@ -1,5 +1,13 @@
 import Link from "next/link"
-import { Zap } from "lucide-react"
+import { Mail, Send, Zap } from "lucide-react"
+
+function WhatsAppIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" {...props}>
+      <path d="M19.1 4.9A9.9 9.9 0 0 0 3.5 16.7L2 22l5.5-1.5a9.9 9.9 0 0 0 4.7 1.2h.1A9.9 9.9 0 0 0 19.1 4.9Zm-6.8 15.1h-.1a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3.3.9.9-3.2-.2-.3a8.2 8.2 0 1 1 7.2 3.9Zm4.5-6.2c-.2-.1-1.2-.6-1.4-.7-.2-.1-.3-.1-.5.1s-.6.7-.7.8c-.1.1-.2.2-.4.1-.2-.1-.9-.3-1.6-1-.6-.5-1-1.1-1.1-1.3-.1-.2 0-.3.1-.4l.3-.3.2-.3c.1-.1.1-.2.2-.3.1-.1 0-.3 0-.4 0-.1-.5-1.2-.6-1.6-.1-.4-.3-.3-.5-.3h-.4c-.1 0-.4.1-.6.3-.2.2-.8.7-.8 1.7s.8 2 1 2.1c.1.1 1.6 2.5 3.8 3.5.5.2.9.4 1.2.5.5.1 1 .1 1.3.1.4-.1 1.2-.5 1.4-1 .2-.5.2-.9.1-1-.1-.1-.2-.1-.4-.2Z" />
+    </svg>
+  )
+}
 
 const footerLinks = {
   Product: [
@@ -46,6 +54,38 @@ export function SiteFooter() {
             <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
               The premier marketplace for premium APIs. Build faster, scale smarter.
             </p>
+            <div className="mt-5 space-y-2 text-xs text-muted-foreground">
+              <a
+                href="tel:+923464901531"
+                className="flex items-center gap-2 hover:text-foreground transition-colors"
+              >
+                <WhatsAppIcon className="h-3.5 w-3.5" />
+                WhatsApp: +92 346 4901531
+              </a>
+              <a
+                href="mailto:apiflowagency@gmail.com"
+                className="flex items-center gap-2 hover:text-foreground transition-colors"
+              >
+                <Mail className="h-3.5 w-3.5" />
+                Gmail: apiflowagency@gmail.com
+              </a>
+              <a
+                href="mailto:numericfida786@gmail.com"
+                className="flex items-center gap-2 hover:text-foreground transition-colors"
+              >
+                <Mail className="h-3.5 w-3.5" />
+                Gmail: numericfida786@gmail.com
+              </a>
+              <a
+                href="https://t.me/Apiflowagency"
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center gap-2 hover:text-foreground transition-colors"
+              >
+                <Send className="h-3.5 w-3.5" />
+                Telegram: t.me/Apiflowagency
+              </a>
+            </div>
           </div>
 
           {/* Link Columns */}
@@ -73,19 +113,37 @@ export function SiteFooter() {
           <p className="text-xs text-muted-foreground">
             2026 APIFlow. All rights reserved.
           </p>
-          <div className="flex items-center gap-6">
-            <Link href="#" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
-              Twitter
-            </Link>
-            <Link href="#" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
-              GitHub
-            </Link>
-            <Link href="#" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
-              Discord
-            </Link>
-            <Link href="#" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
-              LinkedIn
-            </Link>
+          <div className="flex items-center gap-4">
+            <a
+              href="https://wa.me/923464901531"
+              target="_blank"
+              rel="noreferrer"
+              className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+            >
+              WhatsApp
+            </a>
+            <a
+              href="https://wa.me/qr/CWSD3YRP4STCO1"
+              target="_blank"
+              rel="noreferrer"
+              className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Add Me on WhatsApp
+            </a>
+            <a
+              href="https://t.me/Apiflowagency"
+              target="_blank"
+              rel="noreferrer"
+              className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Telegram
+            </a>
+            <a
+              href="mailto:apiflowagency@gmail.com"
+              className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Gmail
+            </a>
           </div>
         </div>
       </div>

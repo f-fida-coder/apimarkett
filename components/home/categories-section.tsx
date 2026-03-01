@@ -1,9 +1,40 @@
 import Link from "next/link"
-import { Brain, CreditCard, BarChart3, MessageSquare, MapPin, Cloud, TrendingUp, Share2, Shield, HardDrive, ArrowRight } from "lucide-react"
+import {
+  Brain,
+  CreditCard,
+  BarChart3,
+  MessageSquare,
+  MapPin,
+  Cloud,
+  TrendingUp,
+  Share2,
+  Shield,
+  HardDrive,
+  ArrowRight,
+  Gamepad2,
+  BrainCircuit,
+  Bot,
+  Landmark,
+  ShieldAlert,
+} from "lucide-react"
 import { apiCategories } from "@/lib/data"
 
 const iconMap: Record<string, React.ElementType> = {
-  Brain, CreditCard, BarChart3, MessageSquare, MapPin, Cloud, TrendingUp, Share2, Shield, HardDrive,
+  Brain,
+  CreditCard,
+  BarChart3,
+  MessageSquare,
+  MapPin,
+  Cloud,
+  TrendingUp,
+  Share2,
+  Shield,
+  HardDrive,
+  Gamepad2,
+  BrainCircuit,
+  Bot,
+  Landmark,
+  ShieldAlert,
 }
 
 export function CategoriesSection() {
